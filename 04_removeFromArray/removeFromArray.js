@@ -1,12 +1,11 @@
-const removeFromArray = function(array, extraInput, oneMore = null) {
-  const arraySort = array.filter((item) => {
-    return item !== extraInput;
+const removeFromArray = function (array, ...args) {
+  const newArray = [];
+  array.forEach((item) => {
+    if (!args.includes(item)) {
+      newArray.push(item);
+    }
   });
-
-  const arraySort2 = arraySort.filter((item) => {
-    return item !== oneMore;
-  });
-  return arraySort2;
+  return newArray;
 };
 
 // Do not edit below this line
