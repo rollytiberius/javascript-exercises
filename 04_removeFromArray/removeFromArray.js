@@ -1,4 +1,5 @@
-const removeFromArray = function() {
+const removeFromArray = function (array, extraInput) {
+  return array.push(extraInput).pop();
 };
 
 // Do not edit below this line
